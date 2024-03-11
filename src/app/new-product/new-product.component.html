@@ -1,0 +1,21 @@
+<h2 class="bg-success p-2 text-white h3" > Điện Thoai Mới Nhất  </h2>
+<div class="row  row-cols-1  row-cols-md-2 row-cols-xl-3 g-2">
+    <div class="col" *ngFor="let p of productlist" >
+        <div class="card text-center">
+            <div class="card-header">
+                <h3 class="h4" style="height:45px"> {{p.tensp}} </h3>
+            </div>
+            <div class="card-body">
+              <img class="img-fluid" src="{{p.hinh}}">
+              <p class="h5 mt-3">
+                 Giá : {{p.giasp|number:'1.0-0':'fr' }} VNĐ
+              </p>
+              <button class="btn btn-warning" type="button" (click)="addToCard(p)">Thêm Giỏ Hàng</button>
+
+            </div>
+            <div class="card-footer">
+                <a href="#" routerLink="/product/{{p.id}}">Xem chi tiết</a>
+            </div>
+        </div>
+    </div>
+</div>

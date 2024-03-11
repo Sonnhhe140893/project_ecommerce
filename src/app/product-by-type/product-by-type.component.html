@@ -1,0 +1,5 @@
+<ul class="list-group">
+  <li class="list-group-item py-2" *ngFor="let p of producttype">
+    <a href="#" routerLink="/producttype/{{p.id}}"> {{p.tenLoai | uppercase }}</a>
+  </li>
+</ul>
