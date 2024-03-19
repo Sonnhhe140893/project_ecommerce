@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -8,8 +7,9 @@ export class HelperService {
   constructor() { }
 
 /*Lấy data từ local storage*/
-  getItems(key: string) {
+  getItems(key: string, type:any = 'obj') {
     let value = localStorage.getItem(key);
+    if(type == 'string') return value;
     if(value) return JSON.parse(value);
     return null;
   }

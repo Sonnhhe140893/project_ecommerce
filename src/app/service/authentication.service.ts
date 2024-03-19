@@ -1,6 +1,7 @@
 import { Injectable, input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HelperService } from './common/helper.service';
+import { NgIf } from '@angular/common';
 
 
 
@@ -10,7 +11,7 @@ import { HelperService } from './common/helper.service';
 export class AuthenticationService {
 
   constructor(
-     private http: HttpClient,
+    private http: HttpClient,
     private helperService:HelperService) {}
      api = 'http://localhost:3000/taikhoan';
     getAll(){
@@ -29,10 +30,10 @@ export class AuthenticationService {
     }
 
     isloggedIn(){
-      return sessionStorage.getItem('username') !=null;
+      return this.helperService.getItems('username', 'string')!=null;
     }
 
     getUserrole(){
-      return sessionStorage.getItem('userrole')!=null?sessionStorage.getItem('userrole')?.toString():'';
+      return this.helperService.getItems('role', 'string')!=null?this.helperService.getItems('role', 'string')?.toString():'';
     }
 }

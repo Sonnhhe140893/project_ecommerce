@@ -5,7 +5,8 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand " href="#">Shop</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -28,11 +29,19 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="#" routerLink="login">Đăng nhập</a></li>
+
                 <li><a class="dropdown-item" href="#" routerLink="register">Đăng kí</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#" routerLink="/">Quên mật khẩu</a></li>
+                <li><a class="dropdown-item" href="#" routerLink="">Quên mật khẩu</a></li>
               </ul>
-            </li>
+              <div class="spacer"></div>
+              <li class="nav-item">
+                <a class="nav-link" href="#" routerLink="/" >Logout</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" routerLink="user" >User</a>
+              </li>
+
           </ul>
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="abc" aria-label="Search">

@@ -292,14 +292,50 @@
     {
       "id": "admin",
       "name": "Nguyen Hong Son",
-      "password": "Son$1234",
+      "password": "Son@1234",
       "email": "admin@gmail.com",
       "gender": "male",
       "role": "admin",
       "isactive": true,
       "address":{
         "area":"Hanoi"
-      }
+       }
+      },
+      {
+        "id": "testuser",
+        "name": "Test User",
+        "password": "Test@1234",
+        "email": "test@in.com",
+        "gender": "male",
+        "role": "user",
+        "isactive": true,
+        "address":{
+          "area":"chennai"
+        }
+      },
+      {
+        "id": "Jhon1",
+        "name": "NT Infotech",
+        "password": "Test@1233",
+        "email": "te@in.com",
+        "gender": "male",
+        "role": "tech",
+        "isactive": true,
+        "address":{
+          "area":"chennai"
+        }
+      },
+      {
+        "id": "ntuser",
+        "name": "ramesh",
+        "password": "Test@1234",
+        "email": "te@in.com",
+        "gender": "male",
+        "role": "tech",
+        "isactive": true,
+        "address":{
+          "area":"banglore"
+        }
     }
   ],
   "profile": {

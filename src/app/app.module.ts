@@ -23,7 +23,7 @@ import { CustomerComponent } from './customer/customer.component';
 import { UpdatepopupComponent } from './updatepopup/updatepopup.component';
 import { RegisterComponent } from './register/register.component';
 import { UserComponent } from './user/user.component';
-import { AuthGuardComponent } from './auth-guard/auth-guard.component';
+
 
 
 
@@ -47,9 +47,6 @@ import { AuthGuardComponent } from './auth-guard/auth-guard.component';
     UpdatepopupComponent,
     RegisterComponent,
     UserComponent,
-    AuthGuardComponent,
-
-
   ],
   imports: [
     BrowserModule,
@@ -62,7 +59,6 @@ import { AuthGuardComponent } from './auth-guard/auth-guard.component';
 
   ],
   providers: [
-
   ],
   bootstrap: [AppComponent]
 })

@@ -12,23 +12,24 @@ import { ListProductByTypeComponent } from './list-product-by-type/list-product-
 import { PurchaseComponent } from './purchase/purchase.component';
 import { RegisterComponent } from './register/register.component';
 import { UserComponent } from './user/user.component';
-const routes: Routes = [
-  {path: '',component:HomeControlComponent},
-  {path: 'home',component:HomeControlComponent},
-  {path: 'product',component:ProductComponent},
-  {path: 'product/:id',component:ViewProductdetailComponent},
-  {path: 'producttype/:id',component:ListProductByTypeComponent},
-  {path: 'order',component:CartComponent},
-  {path: 'purchase',component:PurchaseComponent},
-  {path: 'login',component:LoginComponent},
-  {path: 'register',component:RegisterComponent},
-  {path: 'customer',component:CustomerComponent,},
-  {path: 'user',component:UserComponent,},
+import { AuthGuard,  } from './guard/auth.guard';
 
+const routes: Routes = [
+  { path: '', component: HomeControlComponent, canActivate: [AuthGuard] },
+  { path: 'home', component: HomeControlComponent },
+  { path: 'product', component: ProductComponent },
+  { path: 'product/:id', component: ViewProductdetailComponent },
+  { path: 'producttype/:id', component: ListProductByTypeComponent },
+  { path: 'order', component: CartComponent },
+  { path: 'purchase', component: PurchaseComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'customer', component: CustomerComponent },
+  { path: 'user', component: UserComponent, },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

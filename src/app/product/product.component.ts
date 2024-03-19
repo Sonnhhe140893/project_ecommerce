@@ -9,8 +9,7 @@ import { catchError } from 'rxjs';
 export class ProductComponent {
   listP: any;
   constructor(private http: HttpClient) {
-    this.http
-      .get('http://localhost:3000/sanpham', { observe: 'response' })
+    this.http.get('http://localhost:3000/sanpham', { observe: 'response' })
        .pipe(catchError((res: any)=> res))
       .subscribe((res: any) => {
         console.log('ok=', res.ok);
