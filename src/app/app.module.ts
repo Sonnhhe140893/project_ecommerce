@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule,  } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,  } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 
@@ -19,8 +19,7 @@ import { NewProductComponent } from './new-product/new-product.component';
 import { ProductByTypeComponent } from './product-by-type/product-by-type.component';
 import { ListProductByTypeComponent } from './list-product-by-type/list-product-by-type.component';
 import { SimilarProductComponent } from './similar-product/similar-product.component';
-import { CustomerComponent } from './customer/customer.component';
-import { UpdatepopupComponent } from './updatepopup/updatepopup.component';
+
 import { RegisterComponent } from './register/register.component';
 import { UserComponent } from './user/user.component';
 
@@ -43,8 +42,6 @@ import { UserComponent } from './user/user.component';
     ProductByTypeComponent,
     ListProductByTypeComponent,
     SimilarProductComponent,
-    CustomerComponent,
-    UpdatepopupComponent,
     RegisterComponent,
     UserComponent,
   ],

@@ -5,13 +5,16 @@ import { AuthenticationService } from '../service/authentication.service';
 import { Router } from '@angular/router';
 import { clear } from 'console';
 import { HelperService } from '../service/common/helper.service';
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })
 export class LoginComponent {
+
+
+
+
   constructor(
     private builder: FormBuilder,
     private toastr: ToastrService,
@@ -46,9 +49,10 @@ export class LoginComponent {
           console.log('Userdata =>>>>>>>>', this.userdata);
           if(this.userdata.password===this.loginform.value.password){
 
-                if(this.userdata.isactive){
+                if(this.userdata){
                   this.helperService.setItem('username', this.userdata.id);
                   this.helperService.setItem('role', this.userdata.role);
+
                   this.router.navigate(['']);
                 }else{
                   this.toastr.error("Please contract admin","In active user")

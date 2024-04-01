@@ -14,12 +14,9 @@ export class SimilarProductComponent {
 
 @Input() idType : number=0;
 @Input() page_size : number=0;
-constructor(private ProductSV :ProductsService){
 
-}
-
- ngOnInit():void{
- }
+constructor(private ProductSV :ProductsService){}
+ ngOnInit():void{}
 
  ngOnChanges(changes : SimpleChange ,){
     console.log(changes);

@@ -1,3 +1,4 @@
+import { subscribe } from 'diagnostics_channel';
 import { HelperService } from './common/helper.service';
 import { observeOn } from 'rxjs';
 import { Injectable } from '@angular/core';
@@ -47,7 +48,7 @@ export class CartService {
   }
 
   getListCartLocal() {
-   return this.helperService.getItems("cart")
+   return this.helperService.getItems("cart");
   }
 
   clearCart() {
@@ -58,27 +59,36 @@ export class CartService {
     name: string,
     email: string,
     address: string,
-    phonenumber: string
+    phonenumber: string,
+    user_id: any ,
   ) {
-    return this.http.post(
-      `${api}/donhang`,
-      { name: name, email: email, address: address, phonenumber: phonenumber },
-      { observe: 'response' }
-    );
+    if(user_id){
+      return this.http.post(
+        `${api}/donhang` ,
+        { name: name, email: email, address: address, phonenumber: phonenumber, user_id: user_id },
+        { observe: 'response' }
+      )
+    }else{
+      return this.http.post(
+        `${api}/donhang` ,
+        { name: name, email: email, address: address, phonenumber: phonenumber},
+        { observe: 'response' }
+      )
+    }
   }
 
-  getOrderDetails(idPurchase: number, item: Icart) {
+
+  getOrderDetails(idPurchase: number, item : Icart) {
     return this.http.post<any>(
       `${api}/chitietdonhang`,
       {
-        idPurchase: idPurchase,
-        idP: item.idp,
-        nameP: item.namep,
-        piceP: item.picep,
-        quantityP: item.quantityp,
-      },
-      { observe: 'response' }
-    );
+        "idPurchase": idPurchase,
+        "idP": item.idp,
+        "nameP": item.namep,
+        "piceP": item.picep,
+        "quantityP": item.quantityp,
+      } , { observe: 'response' }
+    )
   }
 
   removeFromCart(index: number) {
@@ -89,4 +99,5 @@ export class CartService {
     this.helperService.setItem("cart", items);
 
   }
+
 }

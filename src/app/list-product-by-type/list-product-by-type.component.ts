@@ -39,12 +39,14 @@ export class ListProductByTypeComponent {
   }
 
   NextPage(p = 1) {
+    
     this.pageNum = p;
     let filters: any = {
       page: this.pageNum,
       idType: this.idType,
       page_size: this.pageSize,
     };
+
     this.getProductsByFilter(filters);
 
   }

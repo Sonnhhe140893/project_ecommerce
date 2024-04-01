@@ -22,8 +22,9 @@ export class UserComponent {
         this.userlisting = res.body;
       });
   }
+  
   UpdateUser(){
-    
+
   }
   }
 
