@@ -1,8 +1,8 @@
-import { ICart } from './../interface/ICart';
 import { subscribe } from 'diagnostics_channel';
 import { Component, Output } from '@angular/core';
 import { CartService } from '../service/cart.service';
 import { EventEmitter } from 'stream';
+import { ICart } from '../interface/icart';
 
 @Component({
   selector: 'app-cart',

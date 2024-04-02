@@ -1,9 +1,9 @@
-import { ICart } from './../interface/ICart';
 import { HelperService } from './../service/common/helper.service';
 import { AuthenticationService } from '../service/authentication.service';
 import { Component } from '@angular/core';
 import { CartService } from '../service/cart.service';
 import { Router } from '@angular/router';
+import { ICart } from '../interface/icart';
 @Component({
   selector: 'app-purchase',
   templateUrl: './purchase.component.html',

@@ -13,8 +13,7 @@ export class OrderDetailsComponent {
 
     constructor(
         private CartSV: CartService,
-        private AuthenSV: AuthenticationService,
-        private HelperService: HelperService
+
     ) {}
 
     ngOnInit(): void {
