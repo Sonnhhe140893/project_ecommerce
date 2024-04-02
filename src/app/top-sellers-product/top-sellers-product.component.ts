@@ -28,7 +28,7 @@ export class TopSellersProductComponent {
    console.log(id);
  }
  addToCard(product : IProduct){
-  this.CartSV.addToCart(product);
+  this.CartSV.addToCartV2(product);
   alert('Đã thêm vào giỏ');
 }
 }

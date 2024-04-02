@@ -1,6 +1,10 @@
 
 <div class="alert alert-warning text-center p-5 h2" *ngIf="!items || items?.length==0" >
   Bạn chưa chọn sản phẩm nào
+
+</div>
+<div class="alert alert-warning text-center p-5 h2"  >
+
 </div>
 <table id="cart" class="table table-bordered" *ngIf="items?.length >0" >
   <caption align="top" class="h3">GIỎ HÀNG CỦA BẠN</caption>
@@ -24,3 +28,5 @@
    <td colspan="2"> <a class="btn btn-warning w-100" href="#" routerLink="/purchase" >Thanh toán</a> </td>
    <td colspan="2"> <a class="btn btn-warning w-100" (click)="removeProduct(-1)">Xóa giỏ hàng</a> </td>
   </tr>
+or
+

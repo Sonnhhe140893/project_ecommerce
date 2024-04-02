@@ -10,6 +10,7 @@ import { PurchaseComponent } from './purchase/purchase.component';
 import { RegisterComponent } from './register/register.component';
 import { UserComponent } from './user/user.component';
 import { AuthGuard } from './guard/auth.guard';
+import { OrderDetailsComponent } from './order-details/order-details.component';
 
 const routes: Routes = [
   { path: '', component: HomeControlComponent, canActivate: [AuthGuard] },
@@ -17,11 +18,13 @@ const routes: Routes = [
   { path: 'product', component: ProductComponent },
   { path: 'product/:id', component: ViewProductdetailComponent },
   { path: 'producttype/:id', component: ListProductByTypeComponent },
-  { path: 'order', component: CartComponent },
+  { path: 'cart', component: CartComponent },
+  { path: 'order', component: OrderDetailsComponent },
   { path: 'purchase', component: PurchaseComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'user', component: UserComponent },
+
 ];
 
 @NgModule({

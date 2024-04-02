@@ -1,4 +1,4 @@
-import { Icart } from './../interface/icart';
+import { ICart } from './../interface/ICart';
 import { subscribe } from 'diagnostics_channel';
 import { Component, Output } from '@angular/core';
 import { CartService } from '../service/cart.service';
@@ -11,10 +11,10 @@ import { EventEmitter } from 'stream';
 })
 export class CartComponent {
 
-  
+
   constructor(private CartSV :CartService){}
   items: any = this.CartSV.getListCartLocal();
-  CartItems : Icart[] = []
+  CartItems : ICart[] = []
   ngOnInit():void{
 
   }

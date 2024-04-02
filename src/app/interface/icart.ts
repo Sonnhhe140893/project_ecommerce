@@ -1,7 +1,8 @@
-export interface Icart {
-  idp : number;
+export interface ICart {
+  idp: number;
   namep: string;
-  picep :number;
-  quantityp : number;
+  picep: number;
+  quantityp: number;
   imagep: string;
 }
+

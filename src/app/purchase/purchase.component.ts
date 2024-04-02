@@ -1,4 +1,4 @@
-import { Icart } from './../interface/icart';
+import { ICart } from './../interface/ICart';
 import { HelperService } from './../service/common/helper.service';
 import { AuthenticationService } from '../service/authentication.service';
 import { Component } from '@angular/core';
@@ -15,7 +15,7 @@ export class PurchaseComponent {
   address: string = '';
   phonenumber: string = '';
   user_id: string = '';
-  cart_User: Icart[] = [];
+  cart_User: ICart[] = [];
   constructor(
     private CartSV: CartService,
     private helperService: HelperService,
@@ -27,6 +27,7 @@ export class PurchaseComponent {
     this.user_id = this.helperService.getItems('username');
     console.log('onuinit-------> ', this.user_id);
     this.cart_User = this.helperService.getUserCart(this.user_id);
+    console.log(this.user_id);
     this.getUser();
   }
 
@@ -49,13 +50,13 @@ export class PurchaseComponent {
         cart.forEach(
           (item: any) => {
             console.log("item---------> ", item);
-            this.CartSV.getOrderDetails( idPurchase,  item).subscribe( res => {
+            this.CartSV.setOrderDetails( idPurchase,  item).subscribe( res => {
               console.log(res)
             })
           }
         )
       }
-      this.Router.navigate(['/']);
+      this.Router.navigate(['/'])
     });
   }
 
