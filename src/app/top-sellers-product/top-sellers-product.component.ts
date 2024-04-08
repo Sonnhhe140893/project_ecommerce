@@ -27,8 +27,8 @@ export class TopSellersProductComponent {
  test(id: number) {
    console.log(id);
  }
- addToCard(product : IProduct){
-  this.CartSV.addToCartV2(product);
-  alert('Đã thêm vào giỏ');
-}
+ addToCard(product: IProduct) {
+    this.CartSV.addToCart(product);
+    alert('Đã thêm vào giỏ');
+  }
 }

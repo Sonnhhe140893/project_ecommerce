@@ -136,9 +136,13 @@ export class CartService {
         return this.http.get<any>(url, { params: params });
     }
 
-    getListOrders() {
+    getListOrders(filters:any) {
+        let params = new HttpParams();
+        if(filters?.email){
+            params = params.append('email', filters.email);
+        }
         let url = `${api}/donhang`;
-        return this.http.get<any>(url);
+        return this.http.get<any>(url,{params:params});
     }
 
     removeFromCart(index: number) {

@@ -8,44 +8,45 @@
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Create an account</h2>
 
-              <form [formGroup]="registerform" (ngSubmit)="proceedRegisteration()">
+              <form [formGroup]="registerform" (ngSubmit)="(proceedRegisteration)">
 
                 <div class="form-outline mb-4">
-                  <input type="text" id="form3Example1cg" class="form-control form-control-lg" formControlName="id"/>
-                  <label class="form-label" for="form3Example1cg">UserName</label>
+                  <input type="text" [value]="registerform" id="form3Example1cg" class="form-control form-control-lg" placeholder="Enter UserName " formControlName="id"/>
+                  <label class="form-label" for="form3Example1cg">UserName: </label>
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input type="text" id="form3Example3cg" class="form-control form-control-lg" formControlName="name" />
-                  <label class="form-label" for="form3Example3cg" >Name</label>
+                  <input type="text" id="form3Example3cg" class="form-control form-control-lg" formControlName="name" placeholder="Enter FullName " />
+                  <label class="form-label" for="form3Example3cg"  >Name</label>
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input type="password" id="form3Example4cg" class="form-control form-control-lg"  formControlName="password" />
-                  <label class="form-label" for="form3Example4cg" >Password</label>
+                  <input type="password" id="form3Example4cg" class="form-control form-control-lg"  formControlName="password" placeholder="Enter Password" />
+                  <label class="form-label" for="form3Example4cg"  >Password</label>
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input type="password" id="form3Example4cdg" class="form-control form-control-lg" formControlName="password" />
+                  <input type="password" id="form3Example4cdg" class="form-control form-control-lg"  placeholder="Enter Repeat your password" formControlName="password" />
                   <label class="form-label" for="form3Example4cdg" >Repeat your password</label>
                 </div>
                 <div class="form-outline mb-4">
-                  <input type="email" id="form3Example4cdg" class="form-control form-control-lg" formControlName="email" />
-                  <label class="form-label" for="form3Example4cdg" >email</label>
+                  <input type="email" id="form3Example4cdg" class="form-control form-control-lg" formControlName="email" placeholder="Enter Email" />
+                  <label class="form-label" for="form3Example4cdg"  >Email</label>
                 </div>
-                <div class="col-md-6 mb-4">
+                <div class="form-outline mb-4">
 
-                  <select class="select" formControlName="gender">
-                    <option value="1">Gender</option>
+                  <select class="select" formControlName="gender" aria-label="Select an option">
+
                     <option value="2">Male</option>
                     <option value="3">Female</option>
                     <option value="4">Other...</option>
-                  </select>
+                  </select><p>Gender</p>
+
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input type="text" id="form3Example4cdg" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3Example4cdg" formControlName="role">adress</label>
+                  <input type="text" id="form3Example4cdg" class="form-control form-control-lg" placeholder="Enter Adress"/>
+                  <label class="form-label" for="form3Example4cdg" formControlName="role"  >Adress</label>
                 </div>
 
                 <div class="form-check d-flex justify-content-center mb-5">
@@ -56,7 +57,7 @@
                 </div>
 
                 <div class="d-flex justify-content-center">
-                  <button type="button"
+                  <button type="submit"
                     class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" >Register</button>
                 </div>
 

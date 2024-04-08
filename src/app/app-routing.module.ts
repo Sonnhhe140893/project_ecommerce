@@ -10,7 +10,8 @@ import { PurchaseComponent } from './purchase/purchase.component';
 import { RegisterComponent } from './register/register.component';
 import { UserComponent } from './user/user.component';
 import { AuthGuard } from './guard/auth.guard';
-import { OrderDetailsComponent } from './order-details/order-details.component';
+import { OrderdetailComponent } from './orderdetail/orderdetail.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeControlComponent, canActivate: [AuthGuard] },
@@ -19,7 +20,7 @@ const routes: Routes = [
   { path: 'product/:id', component: ViewProductdetailComponent },
   { path: 'producttype/:id', component: ListProductByTypeComponent },
   { path: 'cart', component: CartComponent },
-  { path: 'order', component: OrderDetailsComponent },
+  { path: 'order', component: OrderdetailComponent },
   { path: 'purchase', component: PurchaseComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },

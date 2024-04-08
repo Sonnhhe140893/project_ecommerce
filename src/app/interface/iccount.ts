@@ -1,5 +1,5 @@
 export interface Iccount {
-  id : number;
+  id : string;
   name: string;
   password: string;
   email: string;

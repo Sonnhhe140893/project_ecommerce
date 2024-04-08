@@ -1,9 +1,10 @@
 <div class="container">
-    <h2>Danh sách sản phẩm đã mua</h2>
+
     <div *ngIf="listOrders?.length == 0" class="alert alert-warning">
         Không có sản phẩm nào đã mua.
     </div>
-    <div class="row" *ngIf="listOrders.length > 0">
+    <div class="row" *ngIf="listOrders.length > 0" >
+        <h2>Danh sách sản phẩm đã mua</h2>
         <div *ngFor="let p of listOrders" class="col-md-4">
             <div class="card">
                 <div class="card-header">

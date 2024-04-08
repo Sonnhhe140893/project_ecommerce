@@ -52,7 +52,7 @@ export class LoginComponent {
                 if(this.userdata){
                   this.helperService.setItem('username', this.userdata.id);
                   this.helperService.setItem('role', this.userdata.role);
-
+                    this.helperService.setItem('email', this.userdata.email);
                   this.router.navigate(['']);
                 }else{
                   this.toastr.error("Please contract admin","In active user")

@@ -22,10 +22,7 @@ import { SimilarProductComponent } from './similar-product/similar-product.compo
 
 import { RegisterComponent } from './register/register.component';
 import { UserComponent } from './user/user.component';
-import { OrderDetailsComponent } from './order-details/order-details.component';
-
-
-
+import { OrderdetailComponent } from './orderdetail/orderdetail.component';
 
 
 
@@ -45,7 +42,8 @@ import { OrderDetailsComponent } from './order-details/order-details.component';
     SimilarProductComponent,
     RegisterComponent,
     UserComponent,
-    OrderDetailsComponent,
+    OrderdetailComponent,
+
   ],
   imports: [
     BrowserModule,
