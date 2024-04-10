@@ -17,8 +17,10 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#" routerLink="">Liên hệ</a>
             </li>
+
             <li class="nav-item">
               <a class="nav-link" href="#" routerLink="product" >Sản phẩm</a>
+
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#" routerLink="cart" >Giỏ Hàng</a>
@@ -32,24 +34,23 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="#" routerLink="login">Đăng nhập</a></li>
-
                 <li><a class="dropdown-item" href="#" routerLink="register">Đăng kí</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#" routerLink="">Quên mật khẩu</a></li>
               </ul>
               <div class="spacer"></div>
               <li class="nav-item">
-                <a class="nav-link" href="#" routerLink="/" >Logout</a>
+                <a class="nav-link" href="#" routerLink="Logout" >Logout</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#" routerLink="user" >User</a>
               </li>
 
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="abc" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Tìm</button>
-          </form>
+          <app-search></app-search>
+
+
+
         </div>
       </div>
     </nav>

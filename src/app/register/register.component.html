@@ -8,30 +8,30 @@
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Create an account</h2>
 
-              <form [formGroup]="registerform" (ngSubmit)="(proceedRegisteration)">
+              <form [formGroup]="registerform" (ngSubmit)="proceedRegisteration()">
 
                 <div class="form-outline mb-4">
-                  <input type="text" [value]="registerform" id="form3Example1cg" class="form-control form-control-lg" placeholder="Enter UserName " formControlName="id"/>
+                  <input type="text"  id="form3Example1cg" class="form-control form-control-lg" placeholder="Enter UserName " formControlName="id"/>
                   <label class="form-label" for="form3Example1cg">UserName: </label>
                 </div>
 
                 <div class="form-outline mb-4">
                   <input type="text" id="form3Example3cg" class="form-control form-control-lg" formControlName="name" placeholder="Enter FullName " />
-                  <label class="form-label" for="form3Example3cg"  >Name</label>
+                  <label class="form-label" for="form3Example3cg"  >Name: </label>
                 </div>
 
                 <div class="form-outline mb-4">
                   <input type="password" id="form3Example4cg" class="form-control form-control-lg"  formControlName="password" placeholder="Enter Password" />
-                  <label class="form-label" for="form3Example4cg"  >Password</label>
+                  <label class="form-label" for="form3Example4cg"  >Password: </label>
                 </div>
 
                 <div class="form-outline mb-4">
                   <input type="password" id="form3Example4cdg" class="form-control form-control-lg"  placeholder="Enter Repeat your password" formControlName="password" />
-                  <label class="form-label" for="form3Example4cdg" >Repeat your password</label>
+                  <label class="form-label" for="form3Example4cdg" >Repeat your password: </label>
                 </div>
                 <div class="form-outline mb-4">
                   <input type="email" id="form3Example4cdg" class="form-control form-control-lg" formControlName="email" placeholder="Enter Email" />
-                  <label class="form-label" for="form3Example4cdg"  >Email</label>
+                  <label class="form-label" for="form3Example4cdg"  >Email:</label>
                 </div>
                 <div class="form-outline mb-4">
 
@@ -46,7 +46,7 @@
 
                 <div class="form-outline mb-4">
                   <input type="text" id="form3Example4cdg" class="form-control form-control-lg" placeholder="Enter Adress"/>
-                  <label class="form-label" for="form3Example4cdg" formControlName="role"  >Adress</label>
+                  <label class="form-label" for="form3Example4cdg" formControlName="role"  >Adress: </label>
                 </div>
 
                 <div class="form-check d-flex justify-content-center mb-5">

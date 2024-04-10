@@ -11,7 +11,7 @@ import { RegisterComponent } from './register/register.component';
 import { UserComponent } from './user/user.component';
 import { AuthGuard } from './guard/auth.guard';
 import { OrderdetailComponent } from './orderdetail/orderdetail.component';
-
+import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
   { path: '', component: HomeControlComponent, canActivate: [AuthGuard] },
@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'user', component: UserComponent },
-
+  { path: 'search/:query', component:SearchComponent},
 ];
 
 @NgModule({

@@ -19,10 +19,10 @@ import { NewProductComponent } from './new-product/new-product.component';
 import { ProductByTypeComponent } from './product-by-type/product-by-type.component';
 import { ListProductByTypeComponent } from './list-product-by-type/list-product-by-type.component';
 import { SimilarProductComponent } from './similar-product/similar-product.component';
-
 import { RegisterComponent } from './register/register.component';
 import { UserComponent } from './user/user.component';
 import { OrderdetailComponent } from './orderdetail/orderdetail.component';
+import { SearchComponent } from './search/search.component';
 
 
 
@@ -43,6 +43,7 @@ import { OrderdetailComponent } from './orderdetail/orderdetail.component';
     RegisterComponent,
     UserComponent,
     OrderdetailComponent,
+    SearchComponent,
 
   ],
   imports: [

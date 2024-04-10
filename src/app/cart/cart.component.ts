@@ -1,7 +1,7 @@
+import { HelperService } from './../service/common/helper.service';
 import { subscribe } from 'diagnostics_channel';
-import { Component, Output } from '@angular/core';
+import { Component, Output ,EventEmitter} from '@angular/core';
 import { CartService } from '../service/cart.service';
-import { EventEmitter } from 'stream';
 import { ICart } from '../interface/icart';
 
 @Component({
@@ -11,13 +11,11 @@ import { ICart } from '../interface/icart';
 })
 export class CartComponent {
 
+  constructor(private CartSV :CartService,private helperSV: HelperService ){}
 
-  constructor(private CartSV :CartService){}
   items: any = this.CartSV.getListCartLocal();
   CartItems : ICart[] = []
-  ngOnInit():void{
-
-  }
+  ngOnInit():void{}
   totalPayment(){
     let ttpay: number=0;
     this.items.forEach((res: any) => { ttpay += res.quantityp * res.picep });
@@ -39,4 +37,13 @@ export class CartComponent {
     }
     this.items = this.CartSV.getListCartLocal();
   }
+
+  onclick(index: number){
+    if(index =1){
+        this.helperSV.deleteItem('cart');
+        this.CartSV.clearCart();
+    }
+
+  this.items = this.CartSV.getListCartLocal();
+}
 }

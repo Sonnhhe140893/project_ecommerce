@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { IProduct } from '../interface/iproduct';
-import { filter, observeOn } from 'rxjs';
+import { Observable, filter, observeOn } from 'rxjs';
 import { IProductsByType } from '../interface/iproducts-by-type';
 const api = 'http://localhost:3000';
 @Injectable({
@@ -59,15 +59,10 @@ export class ProductsService {
     var url = `${api}/sanpham?idLoai=${idType}&_limit=${page_size}`;
     return this.http.get<IProduct[]>(url);
   }
-  // getSimilarProduct(filter:any){
-    // let params = new HttpParams()
-    // if(filter?.idType) params = params.append('idLoai',filter?.idType);
-    // if (filter?.page_size) params = params.append('_limit', filter?.page_size);
 
-
-    // var url = `${api}/sanpham`;
-    // return this.http.get<any>(url, {params:params});
-
-  // }
+  searchProducts(query: string): Observable<any> {
+    let params = new HttpParams().set('query', query);
+    return this.http.get( `${api}/sanpham` , { params });
+  }
 
 }

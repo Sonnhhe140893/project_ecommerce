@@ -25,7 +25,7 @@ export class ListProductByTypeComponent {
     this.rout.params.subscribe((res: any) => {
       this.idType = Number(res?.id);
      this.pageNum = 1;
-      console.log("-----------",res.id);
+      console.log("idType-----------",res.id);
       let filters: any = {
         page: this.pageNum,
         idType: this.idType,
@@ -33,13 +33,14 @@ export class ListProductByTypeComponent {
 
       };
       this.getProductsByFilter(filters);
+
     });
 
 
   }
 
   NextPage(p = 1) {
-    
+
     this.pageNum = p;
     let filters: any = {
       page: this.pageNum,
@@ -52,12 +53,13 @@ export class ListProductByTypeComponent {
   }
 
   getProductsByFilter(filters: any) {
-    console.log(filters);
+    console.log('filters-----------',filters);
     this.ProductSV.getTypeProducts(filters).subscribe((res) => {
       this.listProduct = res.body;
       this.total = Number(res.headers.get('X-Total-Count'));
     });
   }
+
   addToCard(product : IProduct){
     this.CartSV.addToCart(product);
     alert('Đã thêm vào giỏ');

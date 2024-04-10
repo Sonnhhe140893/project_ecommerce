@@ -22,35 +22,10 @@ export class AuthenticationService {
       return this.http.get(this.apiAccount + '/' +id);
     }
 
-    // procceedregister(
-    //     id : string,
-    //     name: string,
-    //     password: string,
-    //     email: string,
-    //     gender : number,
-    //     role : number,
-    //     isactive: boolean,
-    //     address: string,
-    // ){
-    //     return this.http.post(
-    //       this.apiAccount,
-    //        {
-    //          id : id,
-    //         name: name,
-    //         password: password,
-    //         email: email,
-    //         gender : gender,
-    //         role : role,
-    //         isactive: isactive,
-    //         address: address
-    //     },
-    //     { observe: 'response' }
-    // );
-  // }
-
-  RegisterUser(inputdata:any){
-    return this.http.post(this.apiAccount,inputdata)
+    RegisterUser(inputdata:any){
+     return this.http.post(this.apiAccount,inputdata)
   }
+
 
     updateUser(id:any ,inputdata:any){
       return this.http.put(this.apiAccount + '/' + id , inputdata);

@@ -261,6 +261,21 @@
       "phonenumber": "",
       "user_id": "admin",
       "id": 12
+    },
+    {
+      "name": "sơn",
+      "email": "nguyenhongsonfptk14@gmail.com",
+      "address": "Ha noi",
+      "phonenumber": "",
+      "user_id": "Sonnhh",
+      "id": 13
+    },
+    {
+      "name": "sơn",
+      "email": "nguyenhongsonfptk14@gmail.com",
+      "phonenumber": "",
+      "user_id": "Sonnhh",
+      "id": 14
     }
   ],
   "chitietdonhang": [
@@ -287,6 +302,38 @@
       "piceP": "9990000",
       "quantityP": 2,
       "id": 3
+    },
+    {
+      "idPurchase": 13,
+      "idP": 9,
+      "nameP": "Laptop HP 15s i3",
+      "piceP": "9990000",
+      "quantityP": 2,
+      "id": 4
+    },
+    {
+      "idPurchase": 13,
+      "idP": 4,
+      "nameP": "OPPO Reno7 Z 5G",
+      "piceP": "10490000",
+      "quantityP": 1,
+      "id": 5
+    },
+    {
+      "idPurchase": 14,
+      "idP": 9,
+      "nameP": "Laptop HP 15s i3",
+      "piceP": "9990000",
+      "quantityP": 2,
+      "id": 6
+    },
+    {
+      "idPurchase": 14,
+      "idP": 4,
+      "nameP": "OPPO Reno7 Z 5G",
+      "piceP": "10490000",
+      "quantityP": 1,
+      "id": 7
     }
   ],
   "taikhoan": [
@@ -325,6 +372,15 @@
       "address": {
         "area": "chennai"
       }
+    },
+    {
+      "id": "Sonnhh",
+      "name": "sơn",
+      "password": "Son12345",
+      "email": "nguyenhongsonfptk14@gmail.com",
+      "gender": "2",
+      "role": "",
+      "isactive": false
     }
   ],
   "profile": {

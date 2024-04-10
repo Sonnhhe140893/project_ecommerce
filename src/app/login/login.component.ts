@@ -42,7 +42,6 @@ export class LoginComponent {
 
   proceedlogin() {
     console.log('Userdata =>>>>>>>>', this.loginform.value);
-
     if (this.loginform.valid) {
       this.authenSV.getUserByCode(this.loginform.value.username).subscribe((res) => {
           this.userdata = res;
@@ -52,11 +51,10 @@ export class LoginComponent {
                 if(this.userdata){
                   this.helperService.setItem('username', this.userdata.id);
                   this.helperService.setItem('role', this.userdata.role);
-                    this.helperService.setItem('email', this.userdata.email);
+                  this.helperService.setItem('email', this.userdata.email);
                   this.router.navigate(['']);
                 }else{
                   this.toastr.error("Please contract admin","In active user")
-
                 }
           }else{
             this.toastr.error("Invalid credentials")
