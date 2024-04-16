@@ -42,6 +42,8 @@ export class ProductsService {
     if (filter?.page) params = params.append('_page', filter?.page);
     if (filter?.idType) params = params.append('idLoai', filter?.idType);
     if (filter?.page_size) params = params.append('_limit', filter?.page_size);
+    if (filter?.namep) params = params.append('tensp', filter?.namep);
+    // Thêm 1 điều kiên filters?.name ở đây mà append cái giá trị đó
 
     var url = `${api}/sanpham`;
     return this.http.get<any>(url, { params: params, observe: 'response' });
@@ -55,14 +57,13 @@ export class ProductsService {
     return this.http.get<IProduct[]>(url)
   }
 
-   getSimilarProduct(idType: number = 0, page_size: number = 0) {
+   getSimilarProduct(idType: number = 0, page_size: number = 0) {//Thừa, dùng function getTypeProduct kia, logic tự nghĩ tiếp, nhìn mẫu trên đó rồi
     var url = `${api}/sanpham?idLoai=${idType}&_limit=${page_size}`;
     return this.http.get<IProduct[]>(url);
   }
 
   searchProducts(query: string): Observable<any> {
-    let params = new HttpParams().set('query', query);
-    return this.http.get( `${api}/sanpham` , { params });
+    return this.http.get( `${api}/sanpham?q=${query}` , );
   }
 
 }

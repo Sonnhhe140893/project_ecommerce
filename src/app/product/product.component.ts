@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { catchError } from 'rxjs';
 import { IProduct } from '../interface/iproduct';
@@ -11,6 +11,7 @@ import { CartService } from '../service/cart.service';
 })
 export class ProductComponent {
   listP: any;
+
   constructor(private http: HttpClient,private CartSV:CartService ) {
     this.http.get('http://localhost:3000/sanpham', { observe: 'response' })
        .pipe(catchError((res: any)=> res))

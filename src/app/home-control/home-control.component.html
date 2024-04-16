@@ -1,2 +1,8 @@
-<app-top-sellers-product></app-top-sellers-product>
+
+<div  class="my-5">
+    <app-search [search]="search" (searchEvent)="handleSearch($event)"></app-search>
+    <app-list-search [search]="search"  ></app-list-search>
+
+</div>
+<app-top-sellers-product ></app-top-sellers-product>
 <app-new-product></app-new-product>

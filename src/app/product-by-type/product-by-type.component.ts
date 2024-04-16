@@ -13,7 +13,11 @@ export class ProductByTypeComponent {
   producttype: IProductsByType[]= [];
 
   ngOnInit():void {
-    this.ProductSV.getListProductByType().subscribe(res => this.producttype=res);
+    this.ProductSV.getListProductByType().subscribe(res =>
+        {
+            this.producttype=res
+
+        });
   }
 
 }

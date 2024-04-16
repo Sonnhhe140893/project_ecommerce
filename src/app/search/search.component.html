@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
     <input type="text" [(ngModel)]="searchQuery" placeholder="Search for products">
     <button (click)="search()">Search</button>
   </div>
@@ -9,6 +9,9 @@
         {{ product.tensp }} - {{ product.giasp }}
       </li>
     </ul>
+  </div> -->
+  <div>
+    <input type="text" [(ngModel)]="search">
+    <button (click)="emitSearch()">Search</button>
   </div>
-
 

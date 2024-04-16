@@ -23,6 +23,7 @@ import { RegisterComponent } from './register/register.component';
 import { UserComponent } from './user/user.component';
 import { OrderdetailComponent } from './orderdetail/orderdetail.component';
 import { SearchComponent } from './search/search.component';
+import { ListSearchComponent } from './list-search/list-search.component';
 
 
 
@@ -44,6 +45,7 @@ import { SearchComponent } from './search/search.component';
     UserComponent,
     OrderdetailComponent,
     SearchComponent,
+    ListSearchComponent,
 
   ],
   imports: [
