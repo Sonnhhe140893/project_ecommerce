@@ -30,20 +30,5 @@ export class AuthGuard implements CanActivate  {
   }
 }
 
-// export const authenGuard: CanActivateFn = (route: any, state: any) => {
-//   if(inject(AuthenticationService).isloggedIn())
-//     return true;
-//   else {
-//     inject(Router).navigate(['/login']);
-//     return false;
-//   }
 
-  // if (AuthenSV.isloggedIn()) {
-  //   return true;
-  // } else {
-  //   // window.location.href = '/login';
-  //   this.router.navigate(['/login']);
-  //   return false;
-  // }
-// };
 

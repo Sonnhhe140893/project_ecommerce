@@ -326,27 +326,19 @@
       "piceP": "9990000",
       "quantityP": 2,
       "id": 6
-    },
-    {
-      "idPurchase": 14,
-      "idP": 4,
-      "nameP": "OPPO Reno7 Z 5G",
-      "piceP": "10490000",
-      "quantityP": 1,
-      "id": 7
     }
   ],
   "taikhoan": [
     {
       "id": "admin",
-      "name": "Nguyen Hong Son",
-      "password": "Son1234",
-      "email": "admin@gmail.com",
+      "name": "admin User",
+      "password": "admin1234",
+      "email": "testt@in.com",
       "gender": "male",
-      "role": "admin",
+      "role": "user",
       "isactive": true,
       "address": {
-        "area": "Hanoi"
+        "area": "chennai"
       }
     },
     {
@@ -376,11 +368,16 @@
     {
       "id": "Sonnhh",
       "name": "sơn",
-      "password": "Son12345",
+      "password": "Son1234",
+      "gender": "male",
       "email": "nguyenhongsonfptk14@gmail.com",
-      "gender": "2",
-      "role": "",
-      "isactive": false
+      "role": "admin",
+      "isactive": true,
+      "phonenumber": "0962341442",
+      "address": {
+        "area": "chennai"
+      }
+
     }
   ],
   "profile": {

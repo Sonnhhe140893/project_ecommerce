@@ -39,13 +39,13 @@ export class RegisterComponent {
       this.authenSV.RegisterUser(this.registerform.value).subscribe((res)=>
 
       {
-        console.log('resssssss=======>', res)
-        this.toastr.success('please wait admin accept','Register Successfully')
-      this.router.navigate(['login'])
+        console.log('res=======>', res)
+        this.toastr.success('please wait admin accept','Register Successfully');
+      this.router.navigate(['login']);
     });
 
     }else{
-      this.toastr.warning('please enter valid data.')
+      this.toastr.warning('please enter valid data.');
     }
   }
 }

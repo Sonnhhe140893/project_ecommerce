@@ -13,7 +13,7 @@ import { HelperService } from '../service/common/helper.service';
 export class LoginComponent {
 
 
-
+    isloggedIn =false;
 
   constructor(
     private builder: FormBuilder,

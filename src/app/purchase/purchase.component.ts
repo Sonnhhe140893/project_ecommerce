@@ -29,6 +29,7 @@ export class PurchaseComponent {
     this.cart_User = this.helperService.getUserCart(this.user_id);
     console.log(this.user_id);
     this.getUser();
+
   }
 
   creatOrder() {
@@ -43,9 +44,10 @@ export class PurchaseComponent {
       if (res.ok == false) {
         alert(res.statusText);
       } else {
-        let body: any = res.body;
-        let idPurchase: number = Number(body.id);
 
+        let body: any = res.body;
+        console.log('body==========>',body);
+        let idPurchase: number = Number(body.id);
         let cart = this.helperService.getItems('cart');
         cart.forEach(
           (item: any) => {

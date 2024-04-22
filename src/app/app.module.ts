@@ -25,6 +25,9 @@ import { OrderdetailComponent } from './orderdetail/orderdetail.component';
 import { SearchComponent } from './search/search.component';
 import { ListSearchComponent } from './list-search/list-search.component';
 
+import { LogoutComponent } from './logout/logout.component';
+import { UpdateuserComponent } from './updateuser/updateuser.component';
+
 
 
 @NgModule({
@@ -46,6 +49,8 @@ import { ListSearchComponent } from './list-search/list-search.component';
     OrderdetailComponent,
     SearchComponent,
     ListSearchComponent,
+    LogoutComponent,
+    UpdateuserComponent,
 
   ],
   imports: [

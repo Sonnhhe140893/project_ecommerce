@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { catchError } from 'rxjs';
+import { AuthenticationService } from '../service/authentication.service';
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -9,24 +10,26 @@ import { catchError } from 'rxjs';
 export class UserComponent {
 
   userlisting:any;
+  inputdata :any;
 
+  constructor(private AuthenSV: AuthenticationService,) { }
 
-  constructor(private http: HttpClient) {
-    this.http.get('http://localhost:3000/taikhoan', { observe: 'response' })
-       .pipe(catchError((res: any)=> res))
-      .subscribe((res: any) => {
+  ngOnInit(): void {
+  this.AuthenSV.getAll()
+    .subscribe((res: any) => {
         console.log('ok=', res.ok);
         console.log('body=', res.body);
         console.log('res=', res);
         console.log('Content-Type=', res.headers.get('Content-Type'));
         this.userlisting = res.body;
+        console.log('res=====>',res);
       });
-  }
-  
-  UpdateUser(){
+ }
 
   }
-  }
+
+
+
 
 
 

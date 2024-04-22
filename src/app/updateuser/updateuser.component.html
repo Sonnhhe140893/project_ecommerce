@@ -1,0 +1,32 @@
+<form #frm1="ngForm" class="container">
+    <div class="row"> <div class="alert alert-success">Update Account</div> </div>
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <label>Họ tên của quý khách</label>
+            <input [(ngModel)]="name" name="hn" minlength="6" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <label>Email của quý khách</label>
+            <input [(ngModel)]="email" name="e" type="email" class="form-control">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <label>Địa chỉ giao hàng</label>
+            <input [(ngModel)]="address" name="dc" minlength="10" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <label>Điện thoại</label>
+            <input [(ngModel)]="phonenumber" name="dp" minlength="9" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <label>role</label>
+            <input [(ngModel)]="role" name="dt" minlength="3" class="form-control">
+        </div>
+
+    </div>
+    <div class="row mb-3">
+        <button class="btn btn-primary w-25" (click)="updateAccount()" type="button">Update </button>
+    </div>
+  </form>
+
