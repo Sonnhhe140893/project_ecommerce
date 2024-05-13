@@ -24,6 +24,7 @@ export class AuthenticationService {
       return this.http.get(this.apiAccount + '/' +id);
     }
 
+
     RegisterUser(inputdata:any){
      return this.http.post(this.apiAccount,inputdata)
   }
@@ -47,9 +48,15 @@ export class AuthenticationService {
     isloggedIn() {
       return this.helperService.getItems('username', 'string')!=null;
     }
+    logout(){
+        return this.helperService.deleteItem('username');
+    }
 
     getUserrole():Observable<any>{
       return this.helperService.getItems('role', 'string')!=null?this.helperService.getItems('role', 'string')?.toString():'';
     }
+    cartByUser(user_id:string , cart:any[]){
+        localStorage.setItem(user_id, JSON.stringify(cart)) ;
+      }
 
 }

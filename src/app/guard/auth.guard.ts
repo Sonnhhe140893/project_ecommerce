@@ -1,8 +1,6 @@
 
 import { Injectable, inject } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree,Router, CanActivateFn } from '@angular/router';
-import { promises } from 'dns';
-import { ToastrService } from 'ngx-toastr';
 import { Observable } from 'rxjs';
 import { AuthenticationService } from '../service/authentication.service';
 
@@ -14,7 +12,7 @@ export class AuthGuard implements CanActivate  {
   constructor(
     private AuthenSV:  AuthenticationService ,
     private router :Router ,
-    private toastr: ToastrService,
+
 
      ){
 

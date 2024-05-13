@@ -12,8 +12,8 @@ import { UserComponent } from './user/user.component';
 import { AuthGuard } from './guard/auth.guard';
 import { OrderdetailComponent } from './orderdetail/orderdetail.component';
 import { SearchComponent } from './search/search.component';
-import { LogoutComponent } from './logout/logout.component';
 import { UpdateuserComponent } from './updateuser/updateuser.component';
+import { ProductBuilderComponent } from './product-builder/product-builder.component';
 
 const routes: Routes = [
   { path: '', component: HomeControlComponent, canActivate: [AuthGuard] },
@@ -24,12 +24,12 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'order', component: OrderdetailComponent },
   { path: 'purchase', component: PurchaseComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'logout', component: LogoutComponent },
+  { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent },
   { path: 'user', component: UserComponent },
   {path : 'updateuser/:id/edit', component:UpdateuserComponent },
   { path: 'search', component:SearchComponent},
+  { path: 'productbuilder', component:ProductBuilderComponent},
 
 
 ];

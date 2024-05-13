@@ -27,6 +27,7 @@ import { ListSearchComponent } from './list-search/list-search.component';
 
 import { LogoutComponent } from './logout/logout.component';
 import { UpdateuserComponent } from './updateuser/updateuser.component';
+import { ProductBuilderComponent } from './product-builder/product-builder.component';
 
 
 
@@ -51,6 +52,7 @@ import { UpdateuserComponent } from './updateuser/updateuser.component';
     ListSearchComponent,
     LogoutComponent,
     UpdateuserComponent,
+    ProductBuilderComponent,
 
   ],
   imports: [
