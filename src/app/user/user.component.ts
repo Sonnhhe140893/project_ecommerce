@@ -10,7 +10,6 @@ import { AuthenticationService } from '../service/authentication.service';
 export class UserComponent {
 
   userlisting:any;
-  inputdata :any;
 
   constructor(private AuthenSV: AuthenticationService,) { }
 

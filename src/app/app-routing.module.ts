@@ -44,10 +44,10 @@ export class AppRoutingModule {}
 
 
 
-  /* Sao lại đặt route như này, biết cái cpn search nó làm gì ko, nó chỉ chứa form search chứ kp trang web mà đặt route
+  /*  cái cpn search nó làm việc là, nó chỉ chứa form search  kp trang web để đặt route
    Cách 2, tạo 1 component searchProduct chứa design na ná màn home chứa các item đã search được, dùng queryParam để getProduct,
    Truyền lên url các param và value tương ứng khi nhấn search
    Component searchProduct kia thì lấy  queryParam trên  url và gọi list tương ứng thì sẽ ra
    Muốn biết thì search chat gpt hoặc gg : ví dụ: cách lấy queryParam trên url angular (example),
-   xem và hiểu, đấy toàn phần quan trọng thôi, tối thiểu để còn thực tập hoặc làm được
+   xem và hiểu, đấy toàn phần quan trọng ,
    */

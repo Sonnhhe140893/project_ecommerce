@@ -11,7 +11,7 @@ export class SearchComponent {
     @Input() search: string='';
     @Output() searchEvent = new EventEmitter<any>();
 
-    constructor(private producSV:ProductsService , ){
+    constructor( ){
 }
 
     ngOnInit():void{}
@@ -23,18 +23,3 @@ export class SearchComponent {
 
 }
 
-   // searchQuery :string='';
-    // searchResults : IProduct[]= [];
-    // search(){
-    //     if(this.searchQuery.trim() === '') return;
-
-    //         this.producSV.searchProducts(this.searchQuery).subscribe((res:any)=>
-    //         {
-    //             this.searchResults = res;
-    //             this.router.navigate(['/search']);
-    //         },
-    //         (error:any)=>{
-    //             console.error('Error',error);
-    //         }
-    //     );
-    //     }

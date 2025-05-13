@@ -1,15 +1,4 @@
-<!-- <div>
-    <input type="text" [(ngModel)]="searchQuery" placeholder="Search for products">
-    <button (click)="search()">Search</button>
-  </div>
 
-  <div *ngIf="searchResults.length > 0">
-    <ul>
-      <li *ngFor="let product of searchResults">
-        {{ product.tensp }} - {{ product.giasp }}
-      </li>
-    </ul>
-  </div> -->
   <div>
     <input type="text" [(ngModel)]="search">
     <button (click)="emitSearch()">Search</button>

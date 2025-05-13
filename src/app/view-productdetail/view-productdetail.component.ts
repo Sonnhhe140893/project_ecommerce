@@ -39,7 +39,10 @@ export class ViewProductdetailComponent {
       this.ProductSv.getViewProductDetail(id).subscribe((res:any) => {
         this.ViewProduct =res;
         this.idType = this.ViewProduct.idLoai;
-        this.ProductSv.getNameProductType(this.idType).subscribe((res: any) => (this.nameType = res['nameType']));
+        this.ProductSv.getNameProductType(this.idType).subscribe((res: any) =>
+            (this.nameType = res['nameType']
+
+            ));
 
       });
   }

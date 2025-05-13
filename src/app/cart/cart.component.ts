@@ -14,8 +14,9 @@ export class CartComponent {
   constructor(private CartSV :CartService,private helperSV: HelperService ){}
 
   items: any = this.CartSV.getListCartLocal();
-  CartItems : ICart[] = []
+
   ngOnInit():void{}
+
   totalPayment(){
     let ttpay: number=0;
     this.items.forEach((res: any) => { ttpay += res.quantityp * res.picep });

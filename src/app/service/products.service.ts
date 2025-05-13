@@ -10,6 +10,8 @@ const api = 'http://localhost:3000';
 export class ProductsService {
   constructor(private http: HttpClient) {}
 
+  api = 'http://localhost:3000/sanpham';
+
   getProductById(id: number = 0) {
     return this.http.get(`${api}/sanpham/${id}`);
   }
@@ -19,7 +21,7 @@ export class ProductsService {
     if (filter?.category_id) {
       param = param.append('idLoai', filter.category_id);
     }
-    let url = `${api}/sanpham?_sort=solanxem&_order=desc&_limit=6`;
+    let url = `${api}/sanpham?_sort=solanxem&_order=  &_limit=6`;
     return this.http.get<IProduct[]>(url, { params: param });
   }
 
@@ -35,6 +37,10 @@ export class ProductsService {
   getListProductByType() {
     let url = `${api}/loaisp`;
     return this.http.get<IProductsByType[]>(url);
+  }
+
+  createProduct(inputdata: any){
+    return this.http.post(this.api,inputdata);
   }
 
   getTypeProducts(filter: any) {

@@ -29,9 +29,6 @@ export class HelperService {
     localStorage.clear();
   }
 
-  cartByUser(user_id:string , cart:any[]){
-    localStorage.setItem(user_id, JSON.stringify(cart)) ;
-  }
 
   getUserCart( user_id: string):any[]{
     let value:any = localStorage.getItem(user_id);

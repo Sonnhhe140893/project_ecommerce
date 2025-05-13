@@ -24,33 +24,19 @@ export class ListProductByTypeComponent {
   ngOnInit(): void {
     this.rout.params.subscribe((res: any) => {
       this.idType = Number(res?.id);
-     this.pageNum = 1;
+      this.pageNum = 1;
       console.log("idType-----------",res.id);
+
+
       let filters: any = {
         page: this.pageNum,
         idType: this.idType,
         page_size: this.pageSize,
-
       };
       this.getProductsByFilter(filters);
-
     });
-
-
   }
 
-  NextPage(p = 1) {
-
-    this.pageNum = p;
-    let filters: any = {
-      page: this.pageNum,
-      idType: this.idType,
-      page_size: this.pageSize,
-    };
-
-    this.getProductsByFilter(filters);
-
-  }
 
   getProductsByFilter(filters: any) {
     console.log('filters-----------',filters);
@@ -59,6 +45,18 @@ export class ListProductByTypeComponent {
       this.total = Number(res.headers.get('X-Total-Count'));
     });
   }
+
+  NextPage(p = 1) {
+    this.pageNum = p;
+    let filters: any = {
+      page: this.pageNum,
+      idType: this.idType,
+      page_size: this.pageSize,
+    };
+       this.getProductsByFilter(filters);
+
+  }
+
 
   addToCard(product : IProduct){
     this.CartSV.addToCart(product);

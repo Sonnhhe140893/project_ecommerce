@@ -208,6 +208,15 @@
       "hinh": "https://cdn.tgdd.vn/Products/Images/44/268775/Slider/vi-vn-acer-aspire-7-gaming-a715-42g-r4xx-r5-nhqaysv008-1.jpg",
       "ngay": "2024-05-03",
       "idLoai": 3
+    },
+    {
+      "id": 20,
+      "tensp": "Nguyen thi phuong anh",
+      "giasp": 1200000,
+      "mota": "người yêu ngu",
+      "hinh": "https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-6/415583291_1545397172941011_1892039211015348634_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEUz-xoB37yDVnMm5qCAbrpc6_rSfQbmhpzr-tJ9BuaGm-mZzwO-x-BTZeI2euYfMESNabjoBlZi3j5skF5wQLQ&_nc_ohc=WtFYpl38jIUQ7kNvgHBI2ed&_nc_ht=scontent.fhan2-3.fna&oh=00_AYCRaAG76d4jMRc9naKOpXfSLm_jxezvF193kAqSWC_kZA&oe=66496666",
+      "ngay": "2024-05-16",
+      "idLoai": 1
     }
   ],
   "loaisp": [
@@ -276,6 +285,14 @@
       "phonenumber": "",
       "user_id": "Sonnhh",
       "id": 14
+    },
+    {
+      "name": "admin User",
+      "email": "testt@in.com",
+      "address": "chennai",
+      "phonenumber": "0962341442",
+      "user_id": "admin",
+      "id": 15
     }
   ],
   "chitietdonhang": [
@@ -377,7 +394,6 @@
       "address": {
         "area": "chennai"
       }
-
     }
   ],
   "profile": {

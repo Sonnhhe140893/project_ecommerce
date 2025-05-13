@@ -13,14 +13,15 @@ import { Router } from '@angular/router';
 export class RegisterComponent {
 
 
-  constructor (private builder :FormBuilder, private toastr: ToastrService,
-    private authenSV :AuthenticationService, private router :Router, ){}
+  constructor (
+    private builder :FormBuilder,
+    private toastr: ToastrService,
+    private authenSV :AuthenticationService,
+    private router :Router, ){}
 
   registerform = this.builder.group({
     id: this.builder.control('',Validators.compose([Validators.required,Validators.minLength(5)])),
-
     name: this.builder.control('',Validators.required),
-
     password: this.builder.control('',Validators.compose([Validators.required,
         Validators.pattern(
         '(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}'
